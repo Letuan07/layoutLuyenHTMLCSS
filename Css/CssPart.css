@@ -1,0 +1,190 @@
+    /*Thiet lap Global*/
+boby{
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+    /*phần header*/
+.header{
+    text-align: right;
+    font-size: 14px;
+}
+.header p span{
+    font-weight: bold;
+}
+
+    /*phần Navbar*/
+.logo{
+    float: left;
+}
+.menu{
+    margin-left: 6rem;
+    float: left;
+}
+.iconSupport{
+    float: right;
+    margin-right: 25px;
+}
+.logo > h1{
+    margin: 0;
+    margin-top: 5px;
+    margin-left: 25px;
+}
+.nav{
+    list-style: none;
+}
+.nav a{
+    text-decoration: none;
+    color: #000000;
+}
+.nav li:hover a{
+    color: #a73340;
+    
+}
+.nav li{
+    display: inline;
+    margin-right: 22px;
+    font-size: 18px;
+}
+.nav .iconSupport li{
+    margin-right: 10px;
+}
+
+    /*phần carousel*/
+.carousel{
+    clear: both; /*clear bởi vì block bên trên dùng kỹ thuật float*/
+    height: 450px;
+    background-image: url('../Img/slide_df_1.webp');
+    background-size: cover;  /*chỉnh kích thước của ảnh nền, cover nghĩa là bao phủ*/
+    background-clip: content-box; /*tùy chỉnh bao phủ của hình ảnh, 
+                                   content-box nghĩa là ảnh chỉ được phủ trong thẻ không phủ đoạn padding*/
+    background-position: center center /*set vị trị của ảnh, 
+                                        paramater1 set chiều ngang, paramater2 set chiều dọc*/;
+}
+    /*phần intro*/
+.intro{
+    background-image: url('../Img/ImgIntro.webp');
+    height: 250px;
+    background-size: cover;
+    background-position: center center;
+    background-clip: content-box;
+    background-repeat: no-repeat;
+}
+    /*phần product kỹ thuật flex*/
+.product-item img{
+    width: 100%;
+    height: 100%;
+}
+.productFlexboxSkill{
+    display: flex;
+}
+.productFlexboxSkill .product-item{
+    text-align: center;
+}
+.productFlexboxSkill .product-image{
+    padding: 0 5%;
+}
+.product-item .product-detail{
+    text-transform: uppercase;
+    font-family: sans-serif;
+    font-weight: bold;
+    margin: 10px 0;
+    font-size: 14px;
+}
+    /*phần product kỹ thuật Display: grid*/
+.productGridSkill img{
+    width: 100%;
+    height: 100%;
+}
+.productGridSkill{
+    margin-top: 35px;
+    display: grid;
+    /* grid-template-columns: 1fr 1fr 1fr 1fr; */
+    grid-template-columns: repeat(4,1fr);
+}
+.productGridSkill .product-item{
+    padding: 5%;
+}
+    /*phần service*/
+.service{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.service .service-item{
+    padding: 3%;
+}
+.service .service-item h3{
+    font-size: 12px;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    margin-bottom: 7px;
+    margin-top: 30px;
+}
+    /*phần footer*/
+.footer__content{
+    display: flex;
+}
+.footer__content h2{
+    font-size: 20px;
+    font-family: sans-serif;
+}
+.footer__content .footer_item{
+    width: 400px;
+}
+    /*footer__content-desc*/
+.footer__content-desc h2{
+    font-size: 20px;
+    font-family: sans-serif;
+}
+.footer__content-desc p{
+    font-size: 15px;
+    line-height: 18px;
+}
+.footer__content-desc .headingLink{
+    margin: 40px 0 1rem;
+}
+.footer__content-desc .spanDate{
+    font-style: italic;
+}
+.footer__content-desc .brand{
+    font-size: 2rem;
+    font-weight: 700;
+    color:red;
+    margin-top: 20px;
+}
+    /*footer__content-support*/
+.footer__content-support ul{
+    padding-left: 15px;
+}
+.footer__content-support ul{
+    padding-left: 15px;
+}
+.footer__content-support ul li{
+    line-height: 2rem;
+}
+.footer__content-support .support{
+    padding-left: 3.5rem;
+}
+.footer__content-support .support i{
+    font-size: 2.5rem;
+    margin-right: 10px;
+}
+    /*footer__content-info*/
+.footer__content-info{
+        padding-right: 4rem;
+    }
+.footer__content-info p{
+    font-size: 14px;
+    line-height: 2rem;
+}
+.footer__content-info input{
+    padding: 10px 4rem 9px 10px;
+}
+.footer__content-info button{
+    border: none;
+    padding: 11.5px;
+    background-color: #000;
+    color: #ffffff;
+}
