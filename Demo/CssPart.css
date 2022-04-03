@@ -1,0 +1,347 @@
+    /*Thiet lap Global*/
+body{
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+*{
+    box-sizing: border-box;
+}    /*phần header*/
+.header{
+    text-align: right;
+    font-size: 14px;
+}
+.header p span{
+    font-weight: bold;
+}
+
+    /*phần Navbar*/
+.nav{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 15px;
+    /* align-items: center; */
+}
+.nav .logo a{
+    color: #000;
+    text-decoration: none;
+}
+.nav ul{
+    margin: 0%;
+    height: 100%;
+}
+.nav ul li{
+    display: inline-block;
+    list-style: none;
+    text-decoration: none;
+    height: inherit;
+    margin-right: 10px;
+}
+.nav ul li a{
+    color: #000;
+    font-weight: 500;
+    text-decoration: none;
+    transition: 0.2s;
+    font-family: sans-serif;
+    font-size: 18px;
+}
+.menu ul li{
+    margin-right: 20px;
+}
+.menu ul li, .iconSupport ul li{
+    padding: 29px 0;    
+}
+
+            /* CÓ 2 CÁCH ĐỂ TẠO ĐƯỜNG KẺ NGANG DƯỚI THẺ <a> */
+        /* Cách 1: áp dụng thuộc tính Border-bottom */
+.menu ul .menu__item:hover{
+    border-bottom: 1px solid #000;
+}
+        /* Cách 2: áp dụng kiến thức before/after */
+/* .menu .menu__item{
+    position: relative;
+}
+.menu .menu__item:hover a::after{
+    position: absolute;
+    content: '';
+    width: 100%;
+    top: 100%;
+    left: 0px;
+    display: inline-block;
+    border: 1px solid #000;   
+} */
+
+.menu ul .menu__item:hover > a{
+    color: #a73340;
+    transition: 0.2s;
+}
+    /* Xử lý phần Submenu */
+.header{
+    position: relative;
+}
+.menu__item--hover:hover .menu__content{
+    display: block;
+}
+.menu__content{
+    background-color: #ffffff;
+    position: absolute;
+    top: 19%;    
+    left: 0%;
+    width: 100%;
+    padding: 20px 0;
+    border-top: 1px solid #e5e5e5;
+    display: none;
+}
+.menu--flex{
+    display: flex;
+    justify-content: center;
+}
+    /* Xử lý kích thước block chứa Image */
+.menu_list_img{
+    flex-basis: 40%;
+}
+.menu_list_img img{
+    max-width: 100%;
+}
+.menu__list{
+    display: flex;
+    flex-direction: column;
+}
+.menu--flex .menu__list li{
+    padding: 14px 0;
+}
+.menu__list li:hover a{
+    text-decoration: underline;
+}
+
+
+    /*phần carousel*/
+.carousel{
+    margin-top: 2px;
+    clear: both; /*clear bởi vì block bên trên dùng kỹ thuật float*/
+    height: 450px;
+    background-image: url('./Img/slide_df_1.webp');
+    background-size: cover;  /*chỉnh kích thước của ảnh nền, cover nghĩa là bao phủ*/
+    background-clip: content-box; /*tùy chỉnh bao phủ của hình ảnh, 
+                                   content-box nghĩa là ảnh chỉ được phủ trong thẻ không phủ đoạn padding*/
+    background-position: center center /*set vị trị của ảnh, 
+                                        paramater1 set chiều ngang, paramater2 set chiều dọc*/;
+}
+    /*phần intro*/
+.intro{
+    background-image: url('./Img/ImgIntro.webp');
+    height: 250px;
+    background-size: cover;
+    background-position: center center;
+    background-clip: content-box;
+    background-repeat: no-repeat;
+}
+    /*phần product kỹ thuật flex*/
+.product-item img{
+    width: 100%;
+    height: 100%;
+}
+.productFlexboxSkill{
+    display: flex;
+    margin: 0 3.2rem;
+}
+.productFlexboxSkill .product-item{
+    text-align: center;
+    width: 25%;
+    padding: 0 15px;
+    cursor: pointer;
+}
+.product-item .product-detail{
+    text-transform: uppercase;
+    font-family: sans-serif;
+    font-weight: bold;
+    margin: 10px 0;
+    font-size: 14px;
+}
+
+                /* transform-transition */
+
+    /* product-4 */
+.product-image{
+    position: relative;
+    /* overflow: hidden; */
+}
+.product-item .product-image picture:nth-of-type(2){
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    visibility: hidden;
+}
+.product-item:hover .product-image__transform picture:nth-of-type(2){
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.5s ease-out;
+    cursor: pointer;
+}
+    /* product-2 */
+.product-item:hover .product-image picture:nth-of-type(1){
+    opacity: 0;
+    visibility: hidden;
+}
+.product-item .product-image__transform img{
+    transform: rotate(0);
+}
+.product-item:hover .product-image__transform img{
+    transform: rotate(360deg);
+    transition: all 0.5s ease-out;
+}
+.product-item .product-image__transform picture:nth-of-type(2){
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0);
+}
+.product-item:hover .product-image picture:nth-of-type(2){
+    opacity: 1;
+    visibility: visible;
+    cursor: pointer;
+    transform: rotate3d(0, 0, 0, 180deg);
+    transition: all 0.5s ease-out;
+    transform: scale(1);
+}
+
+
+    /*phần product kỹ thuật Display: grid*/
+.productGridSkill img{
+    width: 100%;
+    height: 100%;
+}
+.productGridSkill{
+    margin-top: 35px;
+    display: grid;
+    /* grid-template-columns: 1fr 1fr 1fr 1fr; */
+    grid-template-columns: repeat(4,1fr);
+}
+.productGridSkill .product-item{
+    padding: 5%;
+}
+    /*phần service*/
+.service{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.service .service-item{
+    padding: 3%;
+}
+.service .service-item h3{
+    font-size: 12px;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    margin-bottom: 7px;
+    margin-top: 30px;
+}
+
+/* Xử lý transform */
+.service .icon{
+    position: relative;
+    width: 75px;
+    height: 75px;
+    margin: auto;
+}
+.service .icon img{  /*Xét position thành lớp cha để đè lên*/
+    /* position: relative; */
+    width: 45px;
+    height: 40px;
+    transform: rotate(0);
+    /* z-index: 10; */
+}
+.service .icon::before{
+    content: "";
+    position: absolute;
+    top: -20%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: #1f2027;
+    border-radius: 100%;
+    transition: border-radius 0.3s ease-out;
+}
+.service .icon:hover::before{ 
+    border-radius: 10px;
+    transition: border-radius 0.3s ease-out;
+}
+.service .icon:hover img{
+    transform: rotate(360deg);
+    transition: all 0.3s ease-out;
+}
+
+    /*phần footer*/
+.footer__content{
+    display: flex;
+}
+.footer__content h2{
+    font-size: 20px;
+    font-family: sans-serif;
+}
+.footer__content .footer_item{
+    width: 400px;
+}
+    /*footer__content-desc*/
+.footer__content-desc h2{
+    font-size: 20px;
+    font-family: sans-serif;
+}
+.footer__content-desc p{
+    font-size: 15px;
+    line-height: 18px;
+}
+.footer__content-desc .headingLink{
+    margin: 40px 0 1rem;
+}
+.footer__content-desc .spanDate{
+    font-style: italic;
+}
+.footer__content-desc .brand{
+    font-size: 2rem;
+    font-weight: 700;
+    color:red;
+    margin-top: 20px;
+}
+    /*footer__content-support*/
+.footer__content-support ul{
+    padding-left: 15px;
+}
+.footer__content-support ul{
+    padding-left: 15px;
+}
+.footer__content-support ul li{
+    line-height: 2rem;
+}
+.footer__content-support .support{
+    padding-left: 3.5rem;
+}
+.footer__content-support .support i{
+    font-size: 2.5rem;
+    margin-right: 10px;
+}
+    /*footer__content-info*/
+.footer__content-info{
+        padding-right: 4rem;
+    }
+.footer__content-info p{
+    font-size: 14px;
+    line-height: 2rem;
+}
+.footer__content-info input{
+    padding: 10px 1rem 9px 10px;
+}
+.footer__content-info button{
+    border: none;
+    padding: 11.5px;
+    background-color: #000;
+    color: #ffffff;
+}

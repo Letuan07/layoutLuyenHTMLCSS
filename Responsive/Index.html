@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Css -->
+    <link rel="stylesheet" href="./style.css">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- header -->
+    <header class="header--top">
+        <div class="header--mobile">
+            <div class="header__logo">
+                <h1>HNOSS</h1>
+            </div>
+            <div class="header__icon">
+                <ul>
+                    <li> <i class="fa fa-search"></i></li>
+                    <li> <i class="fa fa-user"></i> </li>
+                    <li> <i class="fa fa-cart-arrow-down"></i></li>
+                    <li class="">
+                        <i style="cursor: pointer;" class="fa fa-bars" onclick="changeDisplay()"></i>
+                       
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="header--desktop">
+            <div class="logo">
+                <h1> <a href="#"> HNOSS </a></h1>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li class="menu__item"> <a href="#"> Hàng mới </a></li>
+                    <li class="menu__item"> <a href="#"> Áo </a></li>
+                    <li class="menu__item menu__item--hover"><a href="#"> Đầm </a></li>
+                    <li class="menu__item"> <a href="#"> Váy </a></li>
+                    <li class="menu__item"> <a href="#"> Quần </a></li>
+                    <li class="menu__item"> <a href="#"> jumpsuit </a></li>
+                    <li class="menu__item"> <a href="#"> Color me happy </a></li>
+                    <li class="menu__item"> <a href="#"> Đồng giá từ 99k </a></li>
+                </ul>
+            </div>
+            <div class="iconSupport">
+                <ul>
+                    <li>
+                        <a href="#"><i class="fa fa-search"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-user"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-cart-plus"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!-- menu -->
+    <div id="menu--openning" class="nav--mobile">
+    
+        <div class="nav__content">
+            <div class="nav--inside">
+                <div class="nav__top">
+                    <h4>MENU</h4>
+                    <div class="menu__bars" onclick="stopMenu()">
+                        <i style="cursor: pointer;" class="fa fa-times"></i>
+                    </div>
+                </div>
+                <div class="nav__middle">
+                    <ul class="menu">
+                        <li> <a href="#"> hàng mới </a>
+                            <p><i class="fa fa-angle-down"></i></p>
+                        </li>
+                        <li class="menu__list" onclick="openCloseSubMenu()"> <a href="#"> Áo </a>
+                            <p style="cursor: pointer;" class="menu--sub">
+                                <span id="iconDown" class="icon-down action"> <i class="fa fa-angle-down"></i></span>
+                                <span class="icon-up" id="iconUp"> <i class="fa fa-angle-up "></i></span>
+                                <div id="openSubMenu" class="menu__list--sub">
+                                    <ul>
+                                        <li> <a href="#"> Croptop </a></li>
+                                        <li> <a href="#"> Bẹt vai </a></li>
+                                        <li> <a href="#"> sơ mi </a></li>
+                                        <li> <a href="#"> thun </a></li>
+                                        <li> <a href="#"> kiểu </a></li>
+                                        <li> <a href="#"> áo khoác </a></li>
+                                    </ul>
+                                </div>
+                            </p>
+                        </li>
+                        <li> <a href="#"> Đầm </a>
+                            <p><i class="fa fa-angle-down"></i></p>
+                        </li>
+                        <li> <a href="#"> váy </a>
+                            <p><i class="fa fa-angle-down"></i></p>
+                        </li>
+                        <li> <a href="#">quần</a>
+                            <p><i class="fa fa-angle-down"></i></p>
+                        </li>
+                        <li> <a href="#"> jumpsuit </a>
+                            <p><i class="fa fa-angle-down"></i></p>
+                        </li>
+                        <li> <a href="#"> color me happy </a>
+                            <p><i class="fa fa-angle-down"></i></p>
+                        </li>
+                        <li> <a href="#"> đồng giá từ 99k </a>
+                            <p><i class="fa fa-angle-down"></i></p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="nav__bottom">
+                    <ul>
+                        <li> <a href="#">tìm Kiếm</a> </li>
+                        <li> <a href="#">giới thiệu </a> </li>
+                        <li> <a href="#">chính sách đổi trả </a> </li>
+                        <li> <a href="#">đăng nhập </a> </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Carousel -->
+    <section class="carousel"></section>
+    <!-- Intro -->
+    <section class="intro"></section>
+    <!-- Product -->
+    <section class="product">
+        <h2>Sản phẩm mới nhất</h2>
+        <div class="product__content">
+            <div class="product__item">
+                <img src="./img/dam1.webp">
+                <p>áo thun ôm kiểu polo - xanh rêu</p>
+                <p>293,000đ</p>
+            </div>
+            <div class="product__item">
+                <img src="./img/product3.webp">
+                <p>áo thun ôm kiểu polo - xanh rêu</p>
+                <p>293,000đ</p>
+            </div>
+            <div class="product__item">
+                <img src="./img/thunDen1.webp">
+                <p>áo thun ôm kiểu polo - xanh rêu</p>
+                <p>293,000đ</p>
+            </div>
+            <div class="product__item">
+                <img src="./img/thunDen2.jpg">
+                <p>áo thun ôm kiểu polo - xanh rêu</p>
+                <p>293,000đ</p>
+            </div>
+        </div>
+    </section>
+    <!-- Service -->
+    <section class="services"></section>
+    <!-- footer -->
+    <footer class="footer"></footer>
+
+
+
+    <!-- javascript -->
+    <script type="text/javascript">
+        var openning = document.getElementById("menu--openning");
+        var iconDown = document.getElementById("iconDown");
+        var iconUp= document.getElementById("iconUp");
+        var count = 0;
+        console.log(openning)
+        function changeDisplay() {
+            // openning.style.display = 'block';
+            openning.style.transform = 'translateX(0)';           
+            openning.style.transition = "all 1s";
+        }
+        function stopMenu() {
+            // openning.style.display = 'none';
+            openning.style.transform = 'translateX(100%)';
+            openning.style.transition = "all 1s";
+        }
+        function openCloseSubMenu() {
+            var openSubMenu = document.getElementById("openSubMenu");
+            if(count%2 == 0){
+                openSubMenu.style.display = 'block';
+                iconUp.classList.add('action');
+                iconDown.classList.remove('action');
+            }else{
+                openSubMenu.style.display = 'none';
+                iconDown.classList.add('action');
+                iconUp.classList.remove('action');
+            }
+            count++;
+        }
+       
+        
+    </script>
+</body>
+
+</html>

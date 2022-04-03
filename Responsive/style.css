@@ -1,0 +1,256 @@
+/* Cài đặt Global */
+body{
+    font-size: 16px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0%;
+    padding: 0 0 30px 0;
+    overflow-x: hidden;
+}
+*{
+    box-sizing: border-box;
+}
+
+        /* Xử lý phần header */
+.header--top{
+    background-color: #fff;
+    /* position: fixed; */
+ 
+    width: 100%;
+    padding: 0px 20px;
+}
+.header--desktop{
+    display: none;
+}
+.header--mobile{
+    display: flex;
+    justify-content: space-between;
+}
+.header__icon{
+    margin: auto 0;
+}
+.header__icon i{
+    font-size: 24px;
+    margin-right: 5px;
+}
+.header__icon > ul > li{
+    list-style: none;
+    display: inline-block;
+}
+        /* Xử lý phần carousel mobile */
+.carousel{
+    background-image: url(./img/CarouselMobile.webp);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-clip: content-box;
+    background-size: cover;
+    height: 43rem;
+}
+        /* Xử lý phần intro mobile */
+.intro{
+    background-image: url(./img/IntroMobile.webp);
+    background-repeat: no-repeat;
+    background-clip: content-box;
+    background-position: center center;
+    background-size: cover;
+    height: 27rem;
+}
+        /* Xử lý phần menu-Bars */
+.nav--mobile{
+    width: 80%;
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    background-color: #fff;
+    height: fit-content;
+    padding: 0 2rem 100vh;
+    transform: translateX(100%);
+    /* display: none; */
+    transition: all 1s;
+    /* overflow-x: visible; */
+}
+
+.nav--mobile ul li{
+    list-style: none;
+}
+.nav--inside{
+    display: flex;
+    flex-direction: column;
+}
+.nav__top{
+    display: flex;
+    justify-content: space-between;
+}
+.nav__top h4{
+    margin: 30px 0;
+}
+.nav__top .menu__bars i{
+    font-size: 3rem;
+    padding: 1rem 0;
+}
+.nav--mobile ul{
+    margin: 0;
+    padding: 0;
+}
+.nav__middle{
+    margin: 0 0 25px 0;
+}
+.nav__middle .menu li{
+    line-height: 3rem;
+}
+.nav__middle .menu > li > a{
+    color: #000;
+    text-transform: capitalize;
+    text-decoration: none;
+    float: left;
+    font-weight: 600;
+    font-size: 24px;
+}
+.nav__middle .menu li p{
+    text-align: right;
+    margin: 0;
+}
+
+.nav__bottom ul li{
+    line-height: 2rem;
+}
+.nav__bottom ul li > a{
+    color: #000000;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+        /* Xử lý phần submenu */
+.menu__list--sub{
+    display: none;
+    position: relative;
+    margin-bottom: 8%;
+}
+.menu__list--sub ul{
+    margin-left: 2rem;
+    position: inherit;
+    top: 35px;
+    left: 0px;
+}
+.menu__list--sub ul li a{
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #000;
+}
+.menu .menu__list .menu--sub{
+    position: relative;
+}
+.icon-up {
+    position: absolute;
+    top: 0%;
+    right: 0;
+    display: none;
+}
+.icon-down{
+    display: none;
+}
+.action{
+    display: block !important;
+}
+            /* Xử lý phần product */
+.product__content img{
+    width: 100%;
+    /* height: 100%; */
+}
+.product > h2{
+    margin-top: 2rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+.product__content{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    padding: 0 20px;
+}
+.product__item p:nth-of-type(1){
+    margin: 12px 0 4px 0;
+    text-align: center;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+.product__item p:nth-of-type(2){
+    margin: 0;
+    text-align: center;
+}
+
+
+
+/* reponsive for any screen */
+
+/* Các màn hình tương ứng  Iphone 6 trở xuống, ipad mini*/
+
+@media screen and (min-width: 768px){
+    .carousel{
+        background-image: url(./img/ImgCarouselMinMax768px.webp);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-clip: content-box;
+        background-size: cover;
+        height: 13rem;
+    }
+            /* Xử lý phần intro mobile */
+    .intro{
+        background-image: url(./img/introForMinMax768px.webp);
+        background-repeat: no-repeat;
+        background-clip: content-box;
+        background-position: center center;
+        background-size: cover;
+        height: 10rem;
+    }
+}
+/* Các màn hình tương ứng  máy tính bảng loại to và desktop*/
+
+@media screen and (min-width: 1024px){
+
+    /* Xử lý phần header tương ứng với màn hình */
+  .header--mobile{
+      display: none;
+  }
+  .header--desktop{
+      display: block;
+      display: flex;
+      justify-content: space-between;
+  }
+  .header--desktop ul{
+      margin: 0;
+      height: 100%;
+      padding: 30px 0;
+  }
+  .header--desktop .logo a{
+      text-decoration: none;    
+      color: #000;
+  }
+  .header--desktop ul li{
+      list-style: none;
+      display: inline-block;
+      margin-right: 20px;
+  }
+  .header--desktop ul li a{
+      color: #000;
+      text-decoration: none;
+  }
+
+
+
+
+  /* Xử lý phần product tương ứng với màn hình */
+  .product__content{
+      display: flex;
+
+  }
+  .product__item{
+      width: 25%;
+      padding: 10px;
+  }
+
+
+
+
+}

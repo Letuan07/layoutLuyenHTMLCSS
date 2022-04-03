@@ -1,0 +1,28 @@
+.red1{
+    background: linear-gradient(0deg, red , yellow);
+    border-radius: 10px 10px 10px 10px;
+    width: 500px;
+    height: 100px;
+    margin-bottom: 30px;
+}
+.red2{
+    background: linear-gradient(90deg, red , yellow);
+    border-radius: 10px 10px 10px 10px;
+    width: 500px;
+    height: 100px;
+    margin-bottom: 30px;
+}
+.red3{
+    background: linear-gradient(180deg, red , yellow);
+    border-radius: 10px 10px 10px 10px;
+    width: 500px;
+    height: 100px;
+    margin-bottom: 30px;
+}
+.red4{
+    background: linear-gradient(-90deg, red , yellow);
+    border-radius: 10px 10px 10px 10px;
+    width: 500px;
+    height: 100px;
+    margin-bottom: 30px;
+}
